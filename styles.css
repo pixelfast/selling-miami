@@ -536,7 +536,7 @@ section {
 }
 .why-stat-num {
   display: block;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 44px;
   font-weight: 300;
   color: var(--gold-light);
