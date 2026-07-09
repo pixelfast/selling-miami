@@ -1,3 +1,5 @@
+@echo off
+
 rem Check if there are any changes (staged, unstaged, or untracked)
 git status --porcelain | findstr . >nul
 if errorlevel 1 (
