@@ -294,6 +294,9 @@
     </footer>
 
     <script>
+      /* ── VISIT TRACKER ── */
+      fetch('php/track.php', { method: 'POST', keepalive: true }).catch(() => {})
+
       /* ── NAV SCROLL ── */
       const nav = document.getElementById('main-nav')
       window.addEventListener(
