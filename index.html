@@ -291,11 +291,19 @@
       <a href="#hero" class="footer-wordmark">selling<span>.</span>miami</a>
       <span>Premium .miami domain · Available for acquisition</span>
       <span>Also available: sold.miami · Inquire about bundle pricing</span>
+      <span id="hit-counter"></span>
     </footer>
 
     <script>
       /* ── VISIT TRACKER ── */
-      fetch('php/track.php', { method: 'POST', keepalive: true }).catch(() => {})
+      fetch('php/track.php', { method: 'POST', keepalive: true })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) {
+            document.getElementById('hit-counter').textContent = `Visit #${data.count}`
+          }
+        })
+        .catch(() => {})
 
       /* ── NAV SCROLL ── */
       const nav = document.getElementById('main-nav')
