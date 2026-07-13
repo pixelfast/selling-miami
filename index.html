@@ -296,7 +296,7 @@
 
     <script>
       /* ── VISIT TRACKER ── */
-      fetch('php/track.php', { method: 'POST', keepalive: true })
+      fetch('php/track.php', { method: 'GET', keepalive: true })
         .then((res) => res.json())
         .then((data) => {
           if (data.success) {
