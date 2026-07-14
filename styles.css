@@ -357,7 +357,7 @@ nav.scrolled {
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.04em;
-  color: var(--ink-mid);
+  color: var(--ink);
   max-width: 400px;
   line-height: 1.85;
   margin-bottom: 40px;
@@ -919,14 +919,14 @@ footer {
   gap: 12px;
   font-size: 11px;
   letter-spacing: 0.06em;
-  color: var(--ink-dim);
+  color: var(--ink);
 }
 .footer-wordmark {
   font-family: var(--font-display);
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
-  color: var(--ink-mid);
+  color: var(--ink);
   text-decoration: none;
 }
 .footer-wordmark span {
