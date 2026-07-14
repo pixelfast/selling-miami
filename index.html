@@ -379,19 +379,20 @@
       }
     </style>
 
-    <!-- Google Fonts: non-blocking load (media=print trick), then switch to all -->
+    <!-- Google Fonts: non-blocking load; display=block avoids a visible font swap
+         (text is briefly invisible instead of flashing from fallback to custom font) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=block"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=block" rel="stylesheet" />
     </noscript>
 
-    <!-- Full stylesheet: non-blocking load, then switch to all -->
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
+    <!-- Full stylesheet: preloaded then swapped to an active stylesheet on load -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
       <link rel="stylesheet" href="styles.css" />
     </noscript>
